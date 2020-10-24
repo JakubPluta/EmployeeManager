@@ -1,8 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from instance.settings import *
 from flask_login import LoginManager
 from flask_migrate import Migrate
+from flask_bootstrap import Bootstrap
 
 
 db = SQLAlchemy()
@@ -15,6 +16,7 @@ def create_app():
     app.config['SECRET_KEY'] = SECRET_KEY
     app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 
+    Bootstrap(app)
     db.init_app(app)
     login_manager.init_app(app)
     login_manager.login_message = "You must be logged in to access this page."
@@ -26,11 +28,10 @@ def create_app():
     from .admin import admin as admin_blueprint
     app.register_blueprint(admin_blueprint, url_prefix='/admin')
 
-    from .auth import auth as auth_blueprint
+    from app.auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
     from .home import home as home_blueprint
     app.register_blueprint(home_blueprint)
-
 
     return app
