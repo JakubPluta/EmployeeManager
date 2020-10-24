@@ -1,4 +1,5 @@
 # config.py
+from instance.settings import *
 
 class Config(object):
     """
@@ -15,7 +16,8 @@ class DevelopmentConfig(Config):
 
     DEBUG = True
     SQLALCHEMY_ECHO = True
-
+    SECRET_KEY =  SECRET_KEY
+    SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI
 
 class ProductionConfig(Config):
     """
