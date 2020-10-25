@@ -4,21 +4,22 @@ body, html {
 }
 
 body, h1, h2, h3 {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-family: 'Oranienbaum', serif;
+    font-weight: 600;
 }
 
 a, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
-  color: #aec251;
+  color: #FF3B3F;
+  font-size: 1.2em;
 }
 
 a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
-  color: #687430;
+  color: #A9A9A9;
 }
 
 footer {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding: 20px 0;
+    background-color: #EFEFEF;
 }
 
 p.copyright {
@@ -59,17 +60,17 @@ p.copyright {
 }
 
 .intro-divider {
-    width: 400px;
+    width: 500px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .intro-header {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
     text-align: center;
-    color: #f8f8f8;
-    background: url(../img/intro.jpg) no-repeat center center;
+    color: #EFEFEF;
+    background: url(../img/intro.jpg) no-repeat center center ;
     background-size: cover;
     height: 100%;
 }
@@ -82,16 +83,16 @@ p.copyright {
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     font-size: 5em;
 }
 
 .intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 }
 
 .lead {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 
